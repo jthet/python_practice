@@ -10,21 +10,17 @@ def average_length(sentance):
     Returns:
         floating point value for the average word length
     '''
-
     # Removing punctionation
     for p in "!?',;.":
         sentance = sentance.replace(p, '')
-
-    words = sentance.split()
-
-    return sum(len(word) for word in words)/len(words)
+    return sum(len(word) for word in sentance.split())/len(sentance.split())
 
 
 def main():
+    # Testing
     sent1 = "Hi, my name is Jackson...I am originally from Houston."
     sent2 = "Onomatopoeia!!!!!!!!!!!!!!!"
     sent3 = "I am"
-
     print(average_length(sent1))
     print(average_length(sent2))
     print(average_length(sent3))
